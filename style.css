@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #2196f3;
+}
+
+body {
+  font-family: system-ui;
+}
+
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.game-on-score-button-click::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007e;
+}
+
+.container {
+  margin: auto;
+  max-width: 900px;
+}
+
+.name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.scores-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: auto;
+  display: none;
+  z-index: 10;
+}
+
+.after-score {
+  display: block;
+}
+
+.scores-screen button {
+  background-color: #009688;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.scores-screen .score-value {
+  background-color: var(--main-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
+.scores-screen .score-value span {
+  color: white;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.radio-box {
+  background-color: white;
+  height: 50px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.radio-box input {
+  display: none;
+}
+
+.radio-box input + label {
+  display: inline-block;
+  padding: 5px 20px;
+  color: white;
+  background-color: #2195f380;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.radio-box input:checked + label {
+  background-color: var(--main-color);
+}
+
+.radio-box .message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.message span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+
+.start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #009688;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.start:hover {
+  background-color: #02443d;
+}
+
+.the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: var(--main-color);
+  user-select: none;
+}
+
+.input {
+  margin: 15px 0;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.input:focus {
+  outline: none;
+}
+
+.upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+}
+.control span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.see-scores {
+  display: block;
+  margin: 20px auto 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.see-scores:hover {
+  background-color: #04365f;
+}
+
+.finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.finish .good {
+  color: var(--main-color);
+}
+.finish .bad {
+  color: red;
+}
+
+.finish .restart {
+  display: block;
+  margin: 20px auto 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.finish .restart:hover {
+  background-color: #04365f;
+}
