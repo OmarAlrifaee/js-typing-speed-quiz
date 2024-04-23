@@ -16,6 +16,11 @@ body {
   background-color: #eee;
   min-height: 100vh;
 }
+@media screen and (max-width: 767px) {
+  .game {
+    padding: 0 20px;
+  }
+}
 
 .game-on-score-button-click::after {
   content: "";
